@@ -1,35 +1,37 @@
 # SigmaNuker - A Discord Spam Bot
 
-![SigmaNuker](https://i.imgur.com/9zTvI7S.png)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Discord](https://img.shields.io/discord/744502805644075013.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/744502805644075013)
+SigmaNuker is a powerful Discord spam Tool that allows you to easily flood channels with messages. It features an advanced configuration system that allows you to customize the bot to your needs.
 
-### About
-SigmaNuker is a simple Discord spam bot that allows you to send a specified message to a specified number of channels. It also supports proxies for sending messages anonymously. 
+## Features
 
-### Features
-- Ability to send a specified message to multiple channels
-- Proxies support for anonymous messaging
-- Option to print sent messages
-- Customizable webhook name
-- Option to change the channel name
-- Option to change the number of messages per channel
+- Proxies support
+- Spamming in multiple channels
+- Customizable messages
+- Webhook support
+- Special Images
 
-### Requirements
-- Python 3.8 or higher
-- Discord API token
-- Proxies (optional)
+## Configuration
 
-### Installation
-- Clone the repository
-- Run `pip install -r requirements.txt` to install the dependencies
-- Create a `config.json` file in the root directory and add the following details:
+thats all Config options
+
 ```json
 {
-    "TOKEN": "Your Discord bot token",
+    "TOKEN": "Token",
     "PROXIES": false,
     "SPAM_PRN": true,
-    "WEBHOOK_NAME": "SigmaNuker",
-    "MESSAGE": "@everyone Spamming with SigmaNuker",
+    "WEBHOOK_NAME": "test",
+    "MESSAGE": "@everyone test",
     "AMMOUNT_OF_CHANNELS": 1,
     "MESSAGES_PER_CHANNEL": 1,
-    "CHANNEL_NAME": "spam-channel"
+    "CHANNEL_NAME": "test"
 }
+
+## Support
+
+If you have any issues or need help, please join our Discord server: https://discord.gg/744502805644075013
+
+
+Please note that the above code is for educational purposes only and should not be used to spam or harass others. Using this code to spam or harass others is illegal and could result in serious consequences. The developer and contributors are not responsible for any misuse of this software.
+
