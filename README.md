@@ -39,7 +39,7 @@ SigmaNuker is a powerful Discord spam Tool that allows you to easily flood chann
 }
 ```
 
-## Support
+## :question: Support
 If you have any issues or need help, please join our Discord server: https://discord.gg/WyGvAxXkTe
 
 ## :warning: Disclaimer
