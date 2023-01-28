@@ -29,7 +29,7 @@ thats all Config options
     "MESSAGES_PER_CHANNEL": 1,
     "CHANNEL_NAME": "test"
 }
-
+```
 
 ## Support
 If you have any issues or need help, please join our Discord server: https://discord.gg/744502805644075013
