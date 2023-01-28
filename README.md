@@ -1,7 +1,7 @@
 # SigmaNuker - A Discord Spam Tool
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![Discord](https://img.shields.io/discord/744502805644075013.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/WyGvAxXkTe)
+[![Discord](https://img.shields.io/discord/1068944516637270046.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/WyGvAxXkTe)
 
 
 SigmaNuker is a powerful Discord spam Tool that allows you to easily flood channels with messages. It features an advanced configuration system that allows you to customize the bot to your needs.
