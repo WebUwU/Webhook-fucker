@@ -34,6 +34,7 @@ thats all Config options
 ## Support
 If you have any issues or need help, please join our Discord server: https://discord.gg/744502805644075013
 
-:warning: Disclaimer
+## :warning: Disclaimer
+
 Please note that the above code is for educational purposes only and should not be used to spam or harass others. Using this code to spam or harass others is illegal and could result in serious consequences. The developer and contributors are not responsible for any misuse of this software.
 
