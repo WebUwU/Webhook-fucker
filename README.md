@@ -1,31 +1,35 @@
 # SigmaNuker - A Discord Spam Bot
 
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![Discord](https://img.shields.io/discord/744502805644075013.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/744502805644075013)
+![SigmaNuker](https://i.imgur.com/9zTvI7S.png)
 
-## Description
+### About
+SigmaNuker is a simple Discord spam bot that allows you to send a specified message to a specified number of channels. It also supports proxies for sending messages anonymously. 
 
-SigmaNuker is a powerful Discord spam bot that allows you to easily flood channels with messages. It features an advanced configuration system that allows you to customize the bot to your needs.
+### Features
+- Ability to send a specified message to multiple channels
+- Proxies support for anonymous messaging
+- Option to print sent messages
+- Customizable webhook name
+- Option to change the channel name
+- Option to change the number of messages per channel
 
-## Features
+### Requirements
+- Python 3.8 or higher
+- Discord API token
+- Proxies (optional)
 
-- Proxies support
-- Spamming in multiple channels
-- Customizable messages
-- Webhook support
-
-## Configuration
-
-To configure the bot, you need to create a config.json file in the root directory with the following format:
-
+### Installation
+- Clone the repository
+- Run `pip install -r requirements.txt` to install the dependencies
+- Create a `config.json` file in the root directory and add the following details:
 ```json
 {
-    "TOKEN": "Token",
+    "TOKEN": "Your Discord bot token",
     "PROXIES": false,
     "SPAM_PRN": true,
-    "WEBHOOK_NAME": "test",
-    "MESSAGE": "@everyone test",
+    "WEBHOOK_NAME": "SigmaNuker",
+    "MESSAGE": "@everyone Spamming with SigmaNuker",
     "AMMOUNT_OF_CHANNELS": 1,
     "MESSAGES_PER_CHANNEL": 1,
-    "CHANNEL_NAME": "test"
+    "CHANNEL_NAME": "spam-channel"
 }
