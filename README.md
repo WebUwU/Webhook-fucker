@@ -1,7 +1,6 @@
 # WebHook Fucker
 
 [![Build Status](https://img.shields.io/badge/build-passing-green.svg)](https://github.com/WebUwU/Webhook-fucker)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WebUwU/Webhook-fucker/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/WebUwU/Webhook-fucker/pulls) 
 [![GitHub version](https://badge.fury.io/gh/WebUwU%2Frepo.svg)](https://github.com/WebUwU/Webhook-fucker)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
