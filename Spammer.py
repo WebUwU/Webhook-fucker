@@ -84,7 +84,7 @@ if send_count.isdigit():
         if not send_message(webhook_url, message, profile_picture_url, proxy):
             break
         time.sleep(int(delay) / 1000)
-        print(Write.colorize(f"Message {i+1}/{send_count} sent", Colors.green))
+        print(f"Message {i+1}/{send_count} sent")
 elif send_count.upper() == "I":
     # Send the message indefinitely
     i = 0
@@ -98,6 +98,6 @@ elif send_count.upper() == "I":
             break
         time.sleep(int(delay) / 1000)
         i += 1
-        print(Write.colorize(f"Message {i} sent", Colors.green))
+        print(f"Message {i} sent")
 else:
-    print(Write.colorize("Invalid input", Colors.red))
+    print("Invalid input")
