@@ -38,34 +38,45 @@ banner = Center.XCenter("""
 """)
 print(Colorate.Vertical(Colors.red_to_purple, banner, 2))
 
-webhook_url = Write.Input("Enter the webhook URL: ", Colors.red_to_purple, interval=0.0600)
-while not webhook_url.startswith("https://discord.com/api/webhooks"):
-    webhook_url = Write.Input("Enter the webhook URL: ", Colors.red_to_purple, interval=0.0600)
-#Space 
-message = Write.Input("Enter the message to send: ", Colors.red_to_purple, interval=0.0600)
 while True:
-    try:
-        int(message)
+    webhook_url = Write.Input("Enter the webhook URL: ", color=Colors.red_to_purple, interval=0.0600, input_color=Colors.red)
+    if not webhook_url:
+        # URL is empty, ask again
+        Write.Print("Invalid URL. Please enter a valid Discord webhook URL",Colors.red_to_purple, interval=0.0025)
+        print()
+        continue
+    if not (webhook_url.startswith("http://") or webhook_url.startswith("https://")):
+        # URL is missing a scheme, ask again
+        Write.Print("Invalid URL. Please enter a valid Discord webhook URL", Colors.red_to_purple, interval=0.0025)
+        print()
+        continue
+    response = requests.head(webhook_url)
+    if response.status_code == 200:
+        # URL is valid, continue with the rest of the program
         break
-    except ValueError:
-        message = Write.Input("Enter a number as the message to send: ", Colors.red_to_purple, interval=0.0600)
+    else:
+        # URL is not valid, ask again
+        Write.Print("Invalid URL. Please enter a valid Discord webhook URL", Colors.red_to_purple, interval=0.0025)
+        print()
+
 #Space 
-profile_picture_url = Write.Input("Enter the profile picture URL: ", Colors.red_to_purple, interval=0.0600)
-while not profile_picture_url.startswith("http"):
-    profile_picture_url = Write.Input("Enter the profile picture URL: ", Colors.red_to_purple, interval=0.0600)
+message = Write.Input("Enter the message to send: ", Colors.red_to_purple, interval=0.0600, input_color=Colors.red)
 #Space 
-send_count = Write.Input("Enter the number of times to send the message (or 'I' for infinite): ", Colors.red_to_purple, interval=0.0600)
+profile_picture_url = Write.Input("Enter the profile picture URL (leave blank to skip): ", Colors.red_to_purple, interval=0.0600)
+if profile_picture_url and not profile_picture_url.startswith("http"):
+    print(Write.Print("Invalid URL. Skipping...", Colors.red_to_purple))
+else:
+    send_count = Write.Input("Enter the number of times to send the message (or 'I' for infinite): ", Colors.red_to_purple, interval=0.0400, input_color=Colors.red)
 #Space 
 while True:
-    delay = Write.Input("Enter the delay between messages in milliseconds: ", Colors.red_to_purple, interval=0.0600)
+    delay = Write.Input("Enter the delay between messages in milliseconds: ", Colors.red_to_purple, interval=0.0500, input_color=Colors.red)
     try:
         int(delay)
         break
     except ValueError:
         pass
 #Space        
-use_proxy = Write.Input("Use proxy (Y/n)? ", Colors.red_to_purple, interval=0.0600).lower() == "y"
-
+use_proxy = Write.Input("Use proxy (Y/n)? ", Colors.red_to_purple, interval=0.0600, input_color=Colors.red).lower() == "y"
 
 if use_proxy:
   with open("proxy.txt") as f:
@@ -84,7 +95,7 @@ if send_count.isdigit():
         if not send_message(webhook_url, message, profile_picture_url, proxy):
             break
         time.sleep(int(delay) / 1000)
-        print(f"Message {i+1}/{send_count} sent")
+        Write.Print(f"Message {i+1}/{send_count} sent", Colors.green)
 elif send_count.upper() == "I":
     # Send the message indefinitely
     i = 0
@@ -98,6 +109,6 @@ elif send_count.upper() == "I":
             break
         time.sleep(int(delay) / 1000)
         i += 1
-        print(f"Message {i} sent")
+        print(Write.Print(f"Message {i} sent", Colors.green))
 else:
-    print("Invalid input")
+    Write.Print("Invalid input", Colors.red)
